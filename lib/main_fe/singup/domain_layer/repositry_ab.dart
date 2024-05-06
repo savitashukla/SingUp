@@ -1,10 +1,6 @@
-abstract class  DomainRepositry
-{
+import '../data_layer/template_model.dart';
 
-
- void homeApi()
-  {
-
-  }
-
+abstract class TemplateLocalDataSource {
+ Future<void> cacheTemplate({required TemplateModel? templateToCache});
+ Future<TemplateModel> getLastTemplate();
 }
