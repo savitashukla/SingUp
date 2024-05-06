@@ -1,9 +1,13 @@
 import 'package:demo_s/res/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
+import '../../login/presentation_layer/controller_login.dart';
+import '../../singup/presentation_layer/controller_singup.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+   Home({super.key});
 
 
   SingUpController controller=Get.put(SingUpController());
@@ -32,21 +36,25 @@ class Home extends StatelessWidget {
               ),
 
 
+              SizedBox(height: 50.h,),
+
 
               Text(
-                "${controllerLogin.}",
+                "Name : ${controllerLogin.textControllerName.text.isNotEmpty?controllerLogin.textControllerName.text:controller.textControllerName.text}",
                 style: TextStyle(
                     color: AppColors.blackDark,
                     fontWeight: FontWeight.w500,
-                    fontSize: 20.sp),
+                    fontSize: 15.sp),
               ),
 
+              SizedBox(height: 10.h,),
+
               Text(
-                "Welcome To Home Page",
+                "EmailId : ${controllerLogin.textControllerEmail.text.isNotEmpty?controllerLogin.textControllerEmail.text:controller.textControllerEmail.text}",
                 style: TextStyle(
                     color: AppColors.blackDark,
                     fontWeight: FontWeight.w500,
-                    fontSize: 20.sp),
+                    fontSize: 15.sp),
               ),
 
 

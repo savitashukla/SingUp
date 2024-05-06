@@ -105,7 +105,19 @@ class SingUp extends StatelessWidget {
                         })),
                 GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, Routes.dashBoard);
+
+                      if(controller.textControllerEmail.text.isNotEmpty && controller.textControllerName.text.isNotEmpty)
+
+                      {
+                        Navigator.pushNamed(context, Routes.dashBoard);
+                      }
+
+                      else
+                      {
+
+
+                        showToast("Please Enter name and email");
+                      }
                     },
                     child: HelpWeight().buttonCreate(
                         "SingUp",

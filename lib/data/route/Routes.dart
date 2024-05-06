@@ -15,7 +15,7 @@ class Routes {
     return {
       Routes.login: (context) =>  Login(),
       Routes.signUp: (context) =>  SingUp(),
-      Routes.dashBoard: (context) => const Home(),
+      Routes.dashBoard: (context) =>  Home(),
     };
   }
 }

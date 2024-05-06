@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../res/AppString.dart';
 
@@ -196,3 +197,17 @@ double getVerticalSize(double px) {
 
 /// This method is used to set text font size according to Viewport.
 double getFontSize(double px) => getSize(px);
+
+
+ void showToast(String validation)
+{
+  Fluttertoast.showToast(
+      msg: validation,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0
+  );
+}

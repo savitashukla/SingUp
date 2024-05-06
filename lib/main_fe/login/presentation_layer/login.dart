@@ -83,7 +83,19 @@ class Login extends StatelessWidget {
               SizedBox(height: 30,),
               GestureDetector(
                   onTap: () {
+
+                    if(controllerLogin.textControllerEmail.text.isNotEmpty && controllerLogin.textControllerName.text.isNotEmpty)
+
+                  {
                     Navigator.pushNamed(context, Routes.dashBoard);
+                  }
+
+                    else
+                      {
+
+
+                        showToast("Please Enter name and email");
+                      }
                   },
                   child: HelpWeight().buttonCreate(
                       "Login",
